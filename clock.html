@@ -19,10 +19,21 @@
 	// 	})
 	//   }
 	  function getAmount() {
-		fetch('https://api.clockify.me/api/v1/user', {
-		  headers: {
+		fetch('https://reports.api.clockify.me/v1/workspaces/636a749f352e1a148fb07239/reports/summary', {
+			method: 'POST',
+			headers: {
 		    'X-Api-Key': "MWYyOWM3ODktMzJiYS00ZWJkLTljM2MtMmI2OWIzNGRkYzlh"
-		  }
+		  },
+		  body: JSON.stringify({
+        "dateRangeStart": "2022-10-31T00:00:00.000",
+        "dateRangeEnd": "2022-11-27T23:59:59.999",
+        "summaryFilter": {
+            "groups": ["PROJECT"],
+            "sortColumn": "GROUP"
+            },
+        "exportType": "JSON"
+        }),
+
 		}).then(r => r.json()).then(user => {
 		  let message = 'Provided API key is not valid'
 		  user.name && (message = `Welcome ${user.name}`)
