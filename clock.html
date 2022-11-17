@@ -21,8 +21,8 @@
 
 		}).then(r => r.json()).then(data => {
 		  messagef = data.totals[0].totalAmount
-		  message = Math.round(messagef)
-			
+		  messager = Math.round(messagef)
+		  message = messager / 100
 		  document.querySelector('#result').innerText = message
 		})
 	  }
