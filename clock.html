@@ -36,7 +36,7 @@
         }),
 
 		}).then(r => r.json()).then(data => {
-		  let message = data.totals[0].totalAmount.toFixed(2)
+		  let message = Math.round(totals[0].totalAmount)
 		  
 		  document.querySelector('#result').innerText = message
 		})
