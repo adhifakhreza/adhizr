@@ -36,7 +36,7 @@
         }),
 
 		}).then(r => r.json()).then(data => {
-		  let message = data
+		  let message = data.totals.totalAmount
 		  
 		  document.querySelector('#result').innerText = message
 		})
