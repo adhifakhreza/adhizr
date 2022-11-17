@@ -25,6 +25,17 @@
 		  message = messager / 100
 		  document.querySelector('#result').innerText = message
 		})
+		const fs = require('fs')
+      
+    // Data which will write in a file.
+    let data = message
+      
+    // Write data in 'Output.txt' .
+    fs.writeFile('Output.txt', data, (err) => {
+          
+        // In case of a error throw err.
+        if (err) throw err;
+    })
 	  }
 	  window.onload = getAmount;
 	</script>
