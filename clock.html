@@ -22,7 +22,8 @@
 		fetch('https://reports.api.clockify.me/v1/workspaces/636a749f352e1a148fb07239/reports/summary', {
 			method: 'POST',
 			headers: {
-		    'X-Api-Key': "MWYyOWM3ODktMzJiYS00ZWJkLTljM2MtMmI2OWIzNGRkYzlh"
+		    'X-Api-Key': "MWYyOWM3ODktMzJiYS00ZWJkLTljM2MtMmI2OWIzNGRkYzlh",
+			'Content-Type': 'application/json'
 		  },
 		  body: JSON.stringify({
         "dateRangeStart": "2022-10-31T00:00:00.000",
