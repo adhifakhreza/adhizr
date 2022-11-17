@@ -20,9 +20,9 @@
         }),
 
 		}).then(r => r.json()).then(data => {
-		  message = data.totals[0]
-		//   messager = Math.round(messagef)
-		//   message = messager / 100
+		  messagef = data.totals[0].totalAmount
+		  messager = Math.round(messagef)
+		  message = messager / 100
 		  document.querySelector('#result').innerText = message
 		})
 	  }
